@@ -5,6 +5,9 @@ import hashlib
 import getpass
 import os
 
+script_path = os.path.dirname(__file__)
+output_file = script_path + "/tls.sh"
+
 print "\n\n\n\n\n\n\n\n\n\t\t Terminal Lock System INSTALL\n\n\n\n"
 
 print "[*] Setting Password for authentication"
@@ -39,11 +42,11 @@ content_center = hashlib.md5(pw).hexdigest()
 
 content = content_front.strip() + content_center.strip() + content_behind.strip()
 
-f = open("tls.sh","w")
+f = open(output_file,"w")
 f.write(content)
 f.close()
 
-os.chmod("tls.sh", 0755)
+os.chmod(output_file, 0700)
 
 print "\n[*] All progress was finished!!"
 print "\n[*] [Usage] ./tls.sh\n"
