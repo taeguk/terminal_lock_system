@@ -23,7 +23,7 @@ print "\n[*] Making tls.sh..."
 content_front = """
 #!/bin/bash
 clear
-trap "echo -ne \\"\\\\n[ Terminal Lock System ] Don't hack!!\\\\nInput Password >> \\"" {1..100} 2> /dev/null
+trap "echo -ne \\"\\\\n[ Terminal Lock System ] Don't hack!!\\\\nInput Password >> \\"" {2..100} 2> /dev/null
 echo -e "\\n\\n\\n\\n\\n\\n\\n\\n\\n\\t\\t\\t\\t Terminal Lock System\\n\\n\\n\\n"
 echo -n "Input Password >> "
 read -s pass
